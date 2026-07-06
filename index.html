@@ -29,16 +29,7 @@
   "image": "https://mclelectric.org/mcl-logo.png",
   "priceRange": "$$",
   "address": {"@type": "PostalAddress","streetAddress": "7231 N Kilpatrick Ave","addressLocality": "Lincolnwood","addressRegion": "IL","postalCode": "60712","addressCountry": "US"},
-  "areaServed": [
-    {"@type":"City","name":"Chicago, IL"},{"@type":"City","name":"Lincolnwood, IL"},{"@type":"City","name":"Skokie, IL"},
-    {"@type":"City","name":"Evanston, IL"},{"@type":"City","name":"Wilmette, IL"},{"@type":"City","name":"Winnetka, IL"},
-    {"@type":"City","name":"Kenilworth, IL"},{"@type":"City","name":"Glencoe, IL"},{"@type":"City","name":"Highland Park, IL"},
-    {"@type":"City","name":"Northbrook, IL"},{"@type":"City","name":"Glenview, IL"},{"@type":"City","name":"Morton Grove, IL"},
-    {"@type":"City","name":"Niles, IL"},{"@type":"City","name":"Park Ridge, IL"},{"@type":"City","name":"Des Plaines, IL"},
-    {"@type":"City","name":"Deerfield, IL"},{"@type":"City","name":"Lake Forest, IL"},{"@type":"City","name":"Arlington Heights, IL"},
-    {"@type":"City","name":"Mount Prospect, IL"},{"@type":"City","name":"Buffalo Grove, IL"},{"@type":"City","name":"Wheeling, IL"},
-    {"@type":"City","name":"Palatine, IL"},{"@type":"City","name":"Schaumburg, IL"},{"@type":"City","name":"Elk Grove Village, IL"}
-  ],
+  "areaServed": [{"@type":"City","name":"Chicago, IL"},{"@type":"City","name":"Lincolnwood, IL"},{"@type":"City","name":"Skokie, IL"},{"@type":"City","name":"Evanston, IL"},{"@type":"City","name":"Park Ridge, IL"},{"@type":"City","name":"Glenview, IL"},{"@type":"City","name":"Highland Park, IL"},{"@type":"City","name":"Kenilworth, IL"},{"@type":"City","name":"Wilmette, IL"},{"@type":"City","name":"Winnetka, IL"},{"@type":"City","name":"Glencoe, IL"},{"@type":"City","name":"Lake Forest, IL"},{"@type":"City","name":"Lake Bluff, IL"},{"@type":"City","name":"Northbrook, IL"},{"@type":"City","name":"Northfield, IL"},{"@type":"City","name":"Deerfield, IL"},{"@type":"City","name":"Riverwoods, IL"},{"@type":"City","name":"Bannockburn, IL"},{"@type":"City","name":"Lincolnshire, IL"},{"@type":"City","name":"Libertyville, IL"},{"@type":"City","name":"Long Grove, IL"},{"@type":"City","name":"Barrington, IL"},{"@type":"City","name":"Arlington Heights, IL"},{"@type":"City","name":"Buffalo Grove, IL"},{"@type":"City","name":"Morton Grove, IL"},{"@type":"City","name":"Niles, IL"},{"@type":"City","name":"Des Plaines, IL"}],
   "openingHoursSpecification": {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"},
   "aggregateRating": {"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"15"},
   "sameAs": ["https://www.yelp.com/biz/mcl-electric-lincolnwood","https://www.facebook.com/p/MCL-Electric-100087299286564/"]
@@ -53,7 +44,7 @@
     {"@type":"Question","name":"How much does an electrical panel upgrade cost in Chicago?","acceptedAnswer":{"@type":"Answer","text":"Most residential panel upgrades in the Chicago area run between $2,000 and $4,500 depending on service size, panel location, and permit requirements. We give an exact upfront price before any work starts — no surprises."}},
     {"@type":"Question","name":"Are you licensed and insured?","acceptedAnswer":{"@type":"Answer","text":"Yes — MCL Electric LLC is a licensed and insured electrical contractor working across Chicago and the North Shore suburbs, handling permits and inspections on every job that requires them."}},
     {"@type":"Question","name":"Do you install EV chargers?","acceptedAnswer":{"@type":"Answer","text":"Yes. We install Level 2 EV chargers (Tesla Wall Connector, ChargePoint, Emporia and others) for homes and businesses, including the load calculation, dedicated circuit, permit, and panel upgrade if your service needs it."}},
-    {"@type":"Question","name":"What areas do you serve?","acceptedAnswer":{"@type":"Answer","text":"We serve Chicago and the suburbs north and northwest of the city — including Lincolnwood, Skokie, Evanston, Wilmette, Glenview, Park Ridge, Northbrook, Highland Park, Arlington Heights, and surrounding communities within about 50 miles."}},
+    {"@type":"Question","name":"What areas do you serve?","acceptedAnswer":{"@type":"Answer","text":"We serve Chicago and the northern suburbs — including Lincolnwood, Skokie, Evanston, Wilmette, Winnetka, Glenview, Park Ridge, Northbrook, Highland Park, Lake Forest, Arlington Heights, and nearby communities."}},
     {"@type":"Question","name":"Do you handle commercial electrical work?","acceptedAnswer":{"@type":"Answer","text":"Yes — MCL has completed commercial build-outs for restaurants, medical clinics, offices, and industrial facilities across Chicago, including restoration lighting work at the Art Institute of Chicago."}}
   ]
 }
@@ -61,7 +52,7 @@
 <style>
   :root{
     --black:#101216; --black-2:#191c22; --ink:#23262c;
-    --orange:#f07e18; --orange-hot:#ff8f2e; --orange-dk:#c96a0d; --orange-soft:#fdf1e3;
+    --orange:#f07e18; --orange-hot:#ff8f2e; --orange-dk:#a15505; --orange-soft:#fdf1e3;
     --cream:#faf7f2; --paper:#f2ede4; --mute:#646c78; --line:#e7e2d8;
     --r:16px; --r-sm:11px; --max:1180px;
     --shadow-1:0 1px 2px rgba(16,18,22,.05),0 4px 14px rgba(16,18,22,.06);
@@ -71,6 +62,10 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
+  .skip-link{position:absolute;left:-9999px;top:0;background:var(--black);color:#fff;padding:12px 20px;z-index:200;font-weight:700;border-radius:0 0 10px 0}
+  .skip-link:focus{left:0}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--orange-dk);outline-offset:2px}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}html{scroll-behavior:auto}}
   body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
@@ -83,7 +78,7 @@
   .sub{color:var(--mute);max-width:640px;font-size:17.5px}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px 30px;border-radius:12px;font-weight:700;font-size:15.5px;border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;font-family:var(--body)}
   .btn:hover{transform:translateY(-2px)}
-  .btn-orange{background:var(--orange);color:#fff;box-shadow:0 8px 24px rgba(240,126,24,.35)}
+  .btn-orange{background:var(--orange);color:var(--black);box-shadow:0 8px 24px rgba(240,126,24,.35)}
   .btn-orange:hover{background:var(--orange-hot);box-shadow:0 12px 30px rgba(240,126,24,.45)}
   .btn-dark{background:var(--black);color:#fff}
   .btn-dark:hover{background:#23262c}
@@ -193,7 +188,7 @@
   .steps .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
   @media(max-width:860px){.steps .grid{grid-template-columns:1fr}}
   .step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;box-shadow:var(--shadow-1);position:relative}
-  .step .n{position:absolute;top:-16px;left:26px;width:34px;height:34px;border-radius:10px;background:var(--orange);color:#fff;font-family:var(--disp);font-weight:800;display:grid;place-items:center;font-size:16px;box-shadow:0 6px 14px rgba(240,126,24,.4)}
+  .step .n{position:absolute;top:-16px;left:26px;width:34px;height:34px;border-radius:10px;background:var(--orange);color:var(--black);font-family:var(--disp);font-weight:800;display:grid;place-items:center;font-size:16px;box-shadow:0 6px 14px rgba(240,126,24,.4)}
   .step h3{font-size:17.5px;margin:8px 0 8px}
   .step p{font-size:14.5px;color:var(--mute)}
 
@@ -254,7 +249,7 @@
   @media(max-width:760px){
     .callbar{display:grid;grid-template-columns:1fr 1fr;gap:1px;position:fixed;left:0;right:0;bottom:0;z-index:99;box-shadow:0 -6px 24px rgba(16,18,22,.18)}
     .callbar a{padding:17px 10px;text-align:center;font-weight:800;font-size:15.5px;display:flex;align-items:center;justify-content:center;gap:8px}
-    .callbar .call{background:var(--orange);color:#fff}
+    .callbar .call{background:var(--orange);color:var(--black)}
     .callbar .book{background:var(--black);color:#fff}
     body{padding-bottom:58px}
     section{padding:56px 0}
@@ -265,12 +260,13 @@
 </head>
 <body>
 
-<div class="ribbon"><span class="dot"></span> 24/7 EMERGENCY SERVICE — <a href="tel:+18723780533">CALL NOW: (872) 378-0533</a></div>
+<a class="skip-link" href="#services">Skip to main content</a>
+<div class="ribbon"><span class="dot" aria-hidden="true"></span> 24/7 EMERGENCY SERVICE — <a href="tel:+18723780533">CALL NOW: (872) 378-0533</a></div>
 
 <header class="nav">
   <div class="wrap">
     <a class="logo" href="#top"><img src="mcl-logo.png" alt="MCL Electric LLC — Electricians in Chicago & the North Shore"></a>
-    <nav class="links">
+    <nav class="links" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#reviews">Reviews</a>
       <a href="#work">Our Work</a>
@@ -284,13 +280,14 @@
   </div>
 </header>
 
+<main id="main">
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="bg"></div><div class="veil"></div>
   <div class="wrap">
     <span class="kicker">The Electricians Chicago Trusts</span>
     <h1>Electrical problems? <em>Fixed today.</em></h1>
-    <p class="lead">Same-day service across Chicago and the North Shore from a 5.0-star, owner-run crew. Upfront pricing, clean work, and a licensed electrician on the phone — not a call center.</p>
+    <p class="lead">Same-day service available across Chicago and the North Shore from a 5.0-star, owner-run crew. Upfront pricing, clean work, and a licensed electrician on the phone — not a call center.</p>
     <div class="ctas">
       <a class="btn btn-orange" href="tel:+18723780533">📞&nbsp; Call (872) 378-0533</a>
       <a class="btn btn-ghost" href="#contact">Book a Service Call</a>
@@ -413,7 +410,7 @@
     </div>
     <div class="land rv">
       <span class="badge">🏛️</span>
-      <p><b>Trusted at the Art Institute of Chicago.</b> Our crew delivered restoration lighting on the museum's North Loggia — the same standard of care we bring to your panel, kitchen, or storefront.</p>
+      <p><b>Trusted at the Art Institute of Chicago.</b> Our crew delivered restoration lighting on the museum's North Loggia as part of the Trellis Group restoration team — the same standard of care we bring to your panel, kitchen, or storefront.</p>
     </div>
   </div>
 </section>
@@ -461,23 +458,26 @@
       <a class="pill" href="/electrician-glenview/">Glenview</a>
       <a class="pill" href="/electrician-highland-park/">Highland Park</a>
       <a class="pill" href="/electrician-kenilworth/">Kenilworth</a>
-      <a class="pill" href="/electrician-wilmette/">Wilmette</a><a class="pill" href="/electrician-winnetka/">Winnetka</a><a class="pill" href="/electrician-glencoe/">Glencoe</a>
-      <a class="pill" href="/electrician-northbrook/">Northbrook</a><a class="pill" href="/electrician-northfield/">Northfield</a><a class="pill" href="/electrician-deerfield/">Deerfield</a>
-      <a class="pill" href="/electrician-riverwoods/">Riverwoods</a><a class="pill" href="/electrician-bannockburn/">Bannockburn</a><a class="pill" href="/electrician-highwood/">Highwood</a>
-      <a class="pill" href="/electrician-lake-forest/">Lake Forest</a><a class="pill" href="/electrician-lake-bluff/">Lake Bluff</a><a class="pill" href="/electrician-libertyville/">Libertyville</a>
-      <a class="pill" href="/electrician-vernon-hills/">Vernon Hills</a><a class="pill" href="/electrician-lincolnshire/">Lincolnshire</a><a class="pill" href="/electrician-mundelein/">Mundelein</a>
-      <a class="pill" href="/electrician-grayslake/">Grayslake</a><a class="pill" href="/electrician-gurnee/">Gurnee</a><a class="pill" href="/electrician-waukegan/">Waukegan</a>
-      <a class="pill" href="/electrician-north-chicago/">North Chicago</a><a class="pill" href="/electrician-lake-zurich/">Lake Zurich</a><a class="pill" href="/electrician-barrington/">Barrington</a>
-      <a class="pill" href="/electrician-morton-grove/">Morton Grove</a><a class="pill" href="/electrician-niles/">Niles</a><a class="pill" href="/electrician-golf/">Golf</a>
-      <a class="pill" href="/electrician-des-plaines/">Des Plaines</a><a class="pill" href="/electrician-rosemont/">Rosemont</a><a class="pill" href="/electrician-harwood-heights/">Harwood Heights</a>
-      <a class="pill" href="/electrician-norridge/">Norridge</a><a class="pill" href="/electrician-schiller-park/">Schiller Park</a><a class="pill" href="/electrician-franklin-park/">Franklin Park</a>
-      <a class="pill" href="/electrician-river-grove/">River Grove</a><a class="pill" href="/electrician-elmwood-park/">Elmwood Park</a><a class="pill" href="/electrician-melrose-park/">Melrose Park</a>
-      <a class="pill" href="/electrician-mount-prospect/">Mount Prospect</a><a class="pill" href="/electrician-prospect-heights/">Prospect Heights</a><a class="pill" href="/electrician-arlington-heights/">Arlington Heights</a>
-      <a class="pill" href="/electrician-rolling-meadows/">Rolling Meadows</a><a class="pill" href="/electrician-wheeling/">Wheeling</a><a class="pill" href="/electrician-buffalo-grove/">Buffalo Grove</a>
-      <a class="pill" href="/electrician-long-grove/">Long Grove</a><a class="pill" href="/electrician-palatine/">Palatine</a><a class="pill" href="/electrician-hoffman-estates/">Hoffman Estates</a>
-      <a class="pill" href="/electrician-schaumburg/">Schaumburg</a><a class="pill" href="/electrician-elk-grove-village/">Elk Grove Village</a><a class="pill" href="/electrician-itasca/">Itasca</a>
-      <a class="pill" href="/electrician-wood-dale/">Wood Dale</a><a class="pill" href="/electrician-bensenville/">Bensenville</a><a class="pill" href="/electrician-addison/">Addison</a>
-      <a class="pill" href="/electrician-elmhurst/">Elmhurst</a><a class="pill" href="/electrician-oak-park/">Oak Park</a><span class="pill">+ more nearby towns</span>
+      <a class="pill" href="/electrician-wilmette/">Wilmette</a>
+      <a class="pill" href="/electrician-winnetka/">Winnetka</a>
+      <a class="pill" href="/electrician-glencoe/">Glencoe</a>
+      <a class="pill" href="/electrician-lake-forest/">Lake Forest</a>
+      <a class="pill" href="/electrician-lake-bluff/">Lake Bluff</a>
+      <a class="pill" href="/electrician-northbrook/">Northbrook</a>
+      <a class="pill" href="/electrician-northfield/">Northfield</a>
+      <a class="pill" href="/electrician-deerfield/">Deerfield</a>
+      <a class="pill" href="/electrician-riverwoods/">Riverwoods</a>
+      <a class="pill" href="/electrician-bannockburn/">Bannockburn</a>
+      <a class="pill" href="/electrician-lincolnshire/">Lincolnshire</a>
+      <a class="pill" href="/electrician-libertyville/">Libertyville</a>
+      <a class="pill" href="/electrician-long-grove/">Long Grove</a>
+      <a class="pill" href="/electrician-barrington/">Barrington</a>
+      <a class="pill" href="/electrician-arlington-heights/">Arlington Heights</a>
+      <a class="pill" href="/electrician-buffalo-grove/">Buffalo Grove</a>
+      <a class="pill" href="/electrician-morton-grove/">Morton Grove</a>
+      <a class="pill" href="/electrician-niles/">Niles</a>
+      <a class="pill" href="/electrician-des-plaines/">Des Plaines</a>
+      <span class="pill">+ nearby towns</span>
     </div>
   </div>
 </section>
@@ -491,7 +491,7 @@
     <details class="rv"><summary>How much does an electrical panel upgrade cost?</summary><p>Most residential panel upgrades in the Chicago area run $2,000–$4,500 depending on service size, panel location, and permits. You get an exact upfront price before any work starts.</p></details>
     <details class="rv"><summary>Are you licensed and insured?</summary><p>Yes — MCL Electric LLC is a licensed and insured electrical contractor, and we handle permits and inspections on every job that requires them.</p></details>
     <details class="rv"><summary>Do you install EV chargers?</summary><p>Yes — Level 2 chargers for homes and businesses (Tesla, ChargePoint, Emporia and more), including the load calculation, dedicated circuit, permit, and a panel upgrade if your service needs one.</p></details>
-    <details class="rv"><summary>What areas do you serve?</summary><p>Chicago and the suburbs north and northwest of the city — Lincolnwood, Skokie, Evanston, Wilmette, Glenview, Park Ridge, Northbrook, Highland Park, Arlington Heights and more, within about 50 miles of our Lincolnwood shop.</p></details>
+    <details class="rv"><summary>What areas do you serve?</summary><p>Chicago and the northern suburbs — Lincolnwood, Skokie, Evanston, Wilmette, Winnetka, Glenview, Park Ridge, Northbrook, Highland Park, Lake Forest, Arlington Heights and nearby communities.</p></details>
     <details class="rv"><summary>Do you do commercial work?</summary><p>Yes — from same-day service for restaurants and offices to full commercial build-outs. Our portfolio includes urgent-care clinics, corporate offices, and restoration lighting at the Art Institute of Chicago.</p></details>
   </div>
 </section>
@@ -515,14 +515,14 @@
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://mclelectric.org/thanks/">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="f-row">
-        <label>Name<input type="text" name="name" required placeholder="Your name"></label>
-        <label>Phone<input type="tel" name="phone" required placeholder="(___) ___-____"></label>
+        <label>Name<input type="text" name="name" required autocomplete="name" placeholder="Your name"></label>
+        <label>Phone<input type="tel" name="phone" required autocomplete="tel" placeholder="(___) ___-____"></label>
       </div>
       <div class="f-row">
-        <label>Email<input type="email" name="email" placeholder="you@email.com"></label>
-        <label>Town<input type="text" name="town" placeholder="e.g. Evanston"></label>
+        <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@email.com"></label>
+        <label>Town<input type="text" name="town" autocomplete="address-level2" placeholder="e.g. Evanston"></label>
       </div>
       <label>What do you need?
         <select name="type">
@@ -543,6 +543,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="wrap">
     <div class="cols">
@@ -570,7 +571,7 @@
         <li><a href="/electrician-kenilworth/">Electrician in Kenilworth</a></li>
       </ul></div>
     </div>
-    <div class="base"><span>© 2026 MCL Electric LLC · Chicago, IL</span><span><a href="/">MCLElectric.org</a></span></div>
+    <div class="base"><span>© 2026 MCL Electric LLC · Chicago, IL</span><span><a href="/privacy/">Privacy Policy</a> · <a href="/accessibility/">Accessibility</a> · <a href="/">MCLElectric.org</a></span></div>
   </div>
 </footer>
 

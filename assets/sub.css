@@ -1,9 +1,14 @@
 :root{
   --black:#14161a; --black-2:#1d2026; --ink:#1a1d22;
-  --orange:#f07e18; --orange-dk:#d96a0a; --orange-soft:#fff3e6;
+  --orange:#f07e18; --orange-dk:#a15505; --orange-soft:#fff3e6;
   --paper:#f1ede6; --white:#faf7f2; --mute:#5f6b78; --line:#e4e7ea;
   --radius:12px; --max:1120px;
 }
+/* accessibility */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--black);color:#fff;padding:12px 20px;z-index:200;font-weight:700;border-radius:0 0 8px 0}
+.skip-link:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
@@ -13,7 +18,7 @@ img{max-width:100%;display:block}
 h1,h2,h3{line-height:1.15;font-weight:800;letter-spacing:-.01em;color:var(--black)}
 .btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:transform .12s ease}
 .btn:hover{transform:translateY(-1px)}
-.btn-orange{background:var(--orange);color:#fff}
+.btn-orange{background:var(--orange);color:var(--black)}
 .btn-orange:hover{background:#ff8f2e}
 .btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
 .btn-ghost:hover{border-color:#fff}
@@ -51,8 +56,7 @@ section.content{padding:56px 0}
 .content li::before{content:"⚡";position:absolute;left:0;font-size:12px;top:4px}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
 @media(max-width:700px){.two-col{grid-template-columns:1fr}}
-.content a{color:var(--orange-dk);font-weight:600}
-.content a:hover{text-decoration:underline}
+.content a{color:var(--orange-dk);font-weight:600;text-decoration:underline;text-underline-offset:2px}
 
 /* proof band */
 .proof{background:var(--paper);border-radius:var(--radius);padding:28px 30px;margin:32px 0;max-width:900px}
