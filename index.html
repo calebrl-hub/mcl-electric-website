@@ -113,8 +113,10 @@
 
   /* ── hero ── */
   .hero{position:relative;color:#fff;padding:0;overflow:hidden;background:var(--black)}
-  .hero .bg{position:absolute;inset:0;background:url('img/acorn.jpg') center 60%/cover no-repeat;opacity:.5}
-  .hero .veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(13,14,18,.96) 0%,rgba(13,14,18,.86) 42%,rgba(13,14,18,.45) 100%)}
+  .hero .bg{position:absolute;inset:0;background:url('img/acorn.jpg') center 60%/cover no-repeat;opacity:.62}
+  .hero .slide{position:absolute;inset:0;background:center 60%/cover no-repeat;opacity:0;transition:opacity 1.6s ease-in-out}
+  .hero .slide.on{opacity:.62}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(13,14,18,.95) 0%,rgba(13,14,18,.82) 42%,rgba(13,14,18,.30) 100%)}
   .hero .wrap{position:relative;z-index:2;padding-top:96px;padding-bottom:110px}
   .hero .kicker{color:var(--orange)}
   .hero .kicker::before{background:var(--orange)}
@@ -283,7 +285,9 @@
 <main id="main">
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="bg"></div><div class="veil"></div>
+  <div class="bg" id="heroSlides" aria-hidden="true"
+       data-slides="img/acorn.jpg,img/avli.jpg,img/808-office.jpg,img/acorn-living.jpg,img/brew-lab.jpg"></div>
+  <div class="veil"></div>
   <div class="wrap">
     <span class="kicker">The Electricians Chicago Trusts</span>
     <h1>Electrical problems? <em>Fixed today.</em></h1>
@@ -602,6 +606,30 @@
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
   }), {threshold: .12});
   document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // hero slideshow — crossfades real jobsite photos; static for reduced-motion users
+  (() => {
+    const bg = document.getElementById('heroSlides');
+    if (!bg || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const srcs = bg.dataset.slides.split(',');
+    addEventListener('load', () => {
+      const slides = srcs.map((s, i) => {
+        const d = document.createElement('div');
+        d.className = 'slide' + (i === 0 ? ' on' : '');
+        d.style.backgroundImage = `url('${s}')`;
+        bg.parentElement.insertBefore(d, bg.nextSibling);
+        return d;
+      });
+      bg.style.background = 'none'; // slides take over from the static bg
+      let cur = 0;
+      setInterval(() => {
+        if (document.hidden) return;
+        slides[cur].classList.remove('on');
+        cur = (cur + 1) % slides.length;
+        slides[cur].classList.add('on');
+      }, 6500);
+    });
+  })();
 </script>
 
 </body>
