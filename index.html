@@ -119,7 +119,7 @@
   @media(max-width:860px){nav.links{display:none}}
 
   /* ── Hero ────────────────────────────── */
-  .hero{background:linear-gradient(160deg,rgba(14,16,20,.84) 0%,rgba(20,22,26,.80) 55%,rgba(34,38,45,.72) 100%),url('img/avli.jpg');background-size:cover;background-position:center 35%;color:var(--white);padding:88px 0 0;position:relative;overflow:hidden}
+  .hero{background:linear-gradient(160deg,rgba(14,16,20,.84) 0%,rgba(20,22,26,.80) 55%,rgba(34,38,45,.72) 100%),url('img/avli.jpg');background-size:cover;background-position:center 35%;color:var(--white);padding:80px 0 64px;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(240,126,24,.22),transparent 68%);pointer-events:none}
   .hero-inner{max-width:760px;position:relative;z-index:1}
   .hero h1{font-size:clamp(34px,5.4vw,56px);margin-bottom:18px}
@@ -131,7 +131,7 @@
   .tracks-head{position:relative;z-index:1;display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap}
   .tracks-head b{color:#fff;font-size:15px;font-weight:800}
   .tracks-head span{color:#8593a1;font-size:14px}
-  .tracks{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;transform:translateY(56px);margin-top:-4px;position:relative;z-index:1}
+  .tracks{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px;position:relative;z-index:1}
   @media(max-width:760px){.tracks{grid-template-columns:1fr}}
   .track{background:var(--white);color:var(--ink);border-radius:var(--radius);padding:30px 28px;box-shadow:0 18px 44px rgba(10,12,16,.34);border-top:4px solid var(--orange)}
   .track h3{font-size:20px;margin-bottom:8px;color:var(--black)}
@@ -139,8 +139,7 @@
   .track a{font-weight:700;color:var(--orange-dk);font-size:15px}
   .track a:hover{text-decoration:underline}
   .track .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--orange-soft);border:1px solid #f6dcbf;border-radius:99px;padding:4px 12px;color:var(--orange-dk);margin-bottom:14px}
-  .hero-spacer{height:120px;background:var(--white)}
-  @media(max-width:760px){.hero-spacer{height:440px}}
+  .hero-spacer{display:none}
 
   /* ── Trust bar ───────────────────────── */
   .trust{border-bottom:1px solid var(--line);padding:26px 0}
@@ -233,6 +232,27 @@
   input:hover,select:hover,textarea:hover{border-color:#93a0ab}
   input:focus,select:focus,textarea:focus{outline:2px solid var(--orange);border-color:transparent;background:var(--white)}
 
+  /* ── Mobile polish ───────────────────── */
+  @media(max-width:760px){
+    section{padding:44px 0}
+    .hero{padding:44px 0 40px}
+    .hero p{font-size:17px;margin-bottom:22px}
+    .hero-ctas{margin-bottom:8px}
+    .hero-ctas .btn{flex:1 1 100%;text-align:center}
+    .tracks-head{margin-top:26px}
+    .emergency-bar{font-size:12.5px;padding:9px 12px;gap:7px}
+    .topbar .wrap{justify-content:center;text-align:center}
+    .topbar .wrap span:last-child{display:none}
+    .trust{padding:18px 0}
+    .trust .wrap{gap:10px 22px;font-size:13px}
+    .cat-divider{margin:40px 0 4px}
+    .cards{gap:16px;margin-top:26px}
+    h2{margin-bottom:6px}
+    .about .wrap{gap:32px}
+    .contact .wrap{gap:32px}
+    .q-grid{margin-top:26px}
+  }
+
   /* ── Footer ──────────────────────────── */
   footer{background:var(--black);color:#8b98a6;font-size:14px}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;padding:28px 24px;flex-wrap:wrap;gap:12px}
@@ -306,7 +326,6 @@
     </div>
   </div>
 </section>
-<div class="hero-spacer"></div>
 
 <!-- Trust bar -->
 <div class="trust">

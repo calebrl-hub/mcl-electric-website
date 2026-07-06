@@ -74,6 +74,20 @@ section.content{padding:56px 0}
 .cta-band p{margin-bottom:20px;font-weight:600}
 .cta-band .btn{background:var(--black);color:#fff}
 
+/* mobile polish */
+@media(max-width:760px){
+  .phero{padding:44px 0}
+  .phero p{font-size:16.5px}
+  .phero .ctas .btn{flex:1 1 100%;text-align:center}
+  .phero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  section.content{padding:40px 0}
+  .content h2{margin:28px 0 10px}
+  .emergency-bar{font-size:12.5px;padding:9px 12px;gap:7px}
+  .proof{padding:22px 20px}
+  .why{padding:40px 0}
+  .cta-band{padding:38px 0}
+}
+
 /* footer */
 footer{background:var(--black);color:#8b98a6;font-size:14px;padding:44px 0 0}
 footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px;padding-bottom:32px}
