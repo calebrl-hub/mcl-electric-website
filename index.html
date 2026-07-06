@@ -668,8 +668,13 @@
       <div class="c-line"><div class="ic">✉️</div><div><b>Email</b><a href="mailto:info@mclelectric.org">info@mclelectric.org</a></div></div>
       <div class="c-line"><div class="ic">📍</div><div><b>Service Area</b>Chicago &amp; the surrounding metro</div></div>
     </div>
-    <!-- Netlify-ready form; swap attributes if hosted elsewhere -->
-    <form name="contact" method="POST" data-netlify="true">
+    <!-- FormSubmit relay → info@mclelectric.org (GitHub Pages has no native form handling) -->
+    <form name="contact" method="POST" action="https://formsubmit.co/info@mclelectric.org">
+      <input type="hidden" name="_subject" value="New inquiry from MCLElectric.org">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://mclelectric.org/thanks/">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="f-row">
         <label>Name<input type="text" name="name" required></label>
         <label>Company<input type="text" name="company"></label>
