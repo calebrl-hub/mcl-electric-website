@@ -30,7 +30,7 @@ for u in sm_urls:
     if u == "https://mclelectric.org/": target = os.path.join(ROOT, "index.html")
     if not os.path.exists(target): fail("sitemap.xml", f"lists {u} but no file")
 for p in pages:
-    if p.endswith("404.html") or "/thanks/" in p or "/privacy/" in p or "/accessibility/" in p:
+    if p.endswith("404.html") or "/thanks/" in p or "/gracias/" in p or "/privacy/" in p or "/accessibility/" in p:
         continue  # intentionally out of sitemap
     url = "https://mclelectric.org/" + re.sub(r"index\.html$", "", rel(p)).rstrip("/")
     url = (url + "/") if url != "https://mclelectric.org" else url + "/"
@@ -46,7 +46,8 @@ for p in pages:
     if 'name="description"' not in html: fail(name, "missing meta description")
     if 'rel="canonical"' not in html and not p.endswith("404.html"):
         fail(name, "missing canonical")
-    if '<html lang="en">' not in html: fail(name, 'missing lang="en"')
+    if '<html lang="en">' not in html and '<html lang="es">' not in html:
+        fail(name, 'missing lang="en"/"es"')
     if 'class="skip-link"' not in html: fail(name, "missing skip-link (a11y)")
     if '<main id="main">' not in html and "<main" not in html: fail(name, "missing <main> landmark")
     if PHONE not in html: fail(name, f"missing current phone {PHONE}")
