@@ -1,0 +1,16 @@
+# (C) CI gate — every push runs the site verifier; a red X on the commit
+# means something is broken (broken link, missing tag, old phone number,
+# privacy violation). Nothing blocks Pages deploy, but never ignore a red X.
+name: verify-site
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python3 verify_site.py
