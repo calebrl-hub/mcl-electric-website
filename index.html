@@ -613,6 +613,48 @@
   <a class="book" href="#contact">Book Service</a>
 </div>
 
+<!-- services popup — shows once per session, ~6s after load -->
+<style>
+  .popup-overlay{position:fixed;inset:0;background:rgba(16,18,22,.6);z-index:500;display:none;align-items:center;justify-content:center;padding:20px}
+  .popup-overlay.open{display:flex}
+  .popup{position:relative;background:#fff;border-radius:var(--r);box-shadow:var(--shadow-2);max-width:480px;width:100%;padding:34px 30px 28px;font-family:var(--body)}
+  .popup::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--orange);border-radius:var(--r) var(--r) 0 0}
+  @media (prefers-reduced-motion: no-preference){
+    .popup-overlay.open .popup{animation:popIn .28s cubic-bezier(.2,.9,.3,1.2)}
+    @keyframes popIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+  }
+  .popup-close{position:absolute;top:14px;right:14px;width:38px;height:38px;border:0;border-radius:50%;background:var(--paper);color:var(--black);font-size:17px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .popup-close:hover{background:var(--line)}
+  .popup .kicker{margin-bottom:8px}
+  .popup h2{font-family:var(--disp);font-size:24px;color:var(--black);margin-bottom:14px;line-height:1.2}
+  .popup ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:9px 16px;margin:0 0 20px;font-size:14.5px;color:var(--ink)}
+  .popup ul li{display:flex;align-items:center;gap:8px}
+  .popup ul li::before{content:"⚡";color:var(--orange-dk);font-size:12px}
+  .popup .popup-call{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--orange);color:var(--black);font-family:var(--disp);font-weight:700;font-size:19px;text-decoration:none;padding:15px 18px;border-radius:12px;box-shadow:0 8px 24px rgba(240,126,24,.35)}
+  .popup .popup-call:hover{background:var(--orange-hot)}
+  .popup .popup-note{text-align:center;font-size:12.5px;color:var(--mute);margin-top:11px}
+  @media (max-width:430px){.popup ul{grid-template-columns:1fr}.popup h2{font-size:21px}}
+</style>
+<div class="popup-overlay" id="svcPopup" role="dialog" aria-modal="true" aria-labelledby="svcPopupTitle" aria-hidden="true">
+  <div class="popup">
+    <button class="popup-close" id="svcPopupClose" aria-label="Close popup">✕</button>
+    <span class="kicker">MCL Electric</span>
+    <h2 id="svcPopupTitle">Need an electrician? We handle it all.</h2>
+    <ul>
+      <li>24/7 Emergency</li>
+      <li>Panel Upgrades</li>
+      <li>EV Chargers</li>
+      <li>Lighting</li>
+      <li>Home Repairs</li>
+      <li>Remodel Wiring</li>
+      <li>Commercial Service</li>
+      <li>Inspections</li>
+    </ul>
+    <a class="popup-call" href="tel:+18723780533">📞 (872) 378-0533</a>
+    <p class="popup-note">Same-day visits available in most cases · Licensed &amp; Insured · 5.0★ on Google</p>
+  </div>
+</div>
+
 <script>
   // scroll-reveal (respects reduced motion)
   const io = new IntersectionObserver(es => es.forEach(e => {
@@ -642,6 +684,47 @@
         slides[cur].classList.add('on');
       }, 6500);
     });
+  })();
+
+  // services popup — opens ~6s in, once per browser session
+  (() => {
+    const ov = document.getElementById('svcPopup');
+    const closeBtn = document.getElementById('svcPopupClose');
+    if (!ov || sessionStorage.getItem('mclSvcPopup')) return;
+    let prevFocus = null;
+
+    const close = () => {
+      ov.classList.remove('open');
+      ov.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      sessionStorage.setItem('mclSvcPopup', '1');
+      if (prevFocus) prevFocus.focus();
+      document.removeEventListener('keydown', onKey);
+    };
+
+    const onKey = e => {
+      if (e.key === 'Escape') { close(); return; }
+      if (e.key !== 'Tab') return;
+      // keep keyboard focus inside the dialog while it's open
+      const f = ov.querySelectorAll('button, a[href]');
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    };
+
+    setTimeout(() => {
+      if (sessionStorage.getItem('mclSvcPopup')) return;
+      prevFocus = document.activeElement;
+      ov.classList.add('open');
+      ov.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+      document.addEventListener('keydown', onKey);
+    }, 6000);
+
+    closeBtn.addEventListener('click', close);
+    ov.addEventListener('click', e => { if (e.target === ov) close(); });
+    ov.querySelector('.popup-call').addEventListener('click', () => sessionStorage.setItem('mclSvcPopup', '1'));
   })();
 </script>
 
