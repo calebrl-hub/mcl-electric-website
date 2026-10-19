@@ -1,0 +1,60 @@
+# MCL Electric LLC
+
+> Owner-run, licensed and insured electrical contractor in Chicago, IL, based in Lincolnwood. Residential and commercial electrical service, remodeling and construction across Chicago, the North Shore and the near suburbs. Same-day service available in most cases, 24/7 emergency line, upfront pricing, 5.0 stars on Google. Phone (872) 378-0533 · info@mclelectric.org.
+
+Key facts:
+
+- Business name: MCL Electric LLC
+- Address: 7231 N Kilpatrick Ave, Lincolnwood, IL 60712
+- Phone: (872) 378-0533 (answered 24/7 for emergencies)
+- Email: info@mclelectric.org
+- Website: https://mclelectric.org/
+- Motto: "The Electricians Chicago Trusts."
+- Licensed and insured; permits and inspections handled on every job that needs them
+- Work warranty: 1 year
+- Service area: Chicago (Gold Coast, Lincoln Park, Lakeview, Logan Square, Wicker Park, Bucktown, River North, Streeterville, the Loop, Old Town, Lincoln Square, Edgebrook/Sauganash) plus Lincolnwood, Skokie, Evanston, Wilmette, Kenilworth, Winnetka, Glencoe, Highland Park, Lake Forest, Lake Bluff, Glenview, Northbrook, Northfield, Deerfield, Riverwoods, Bannockburn, Lincolnshire, Libertyville, Long Grove, Barrington, Arlington Heights, Buffalo Grove, Park Ridge, Des Plaines, Niles, Morton Grove, Oak Park, Berwyn, Cicero, Downers Grove and Antioch
+- Notable work: restaurant, clinic, office and industrial build-outs across Chicago, and restoration lighting at the Art Institute of Chicago as part of the Trellis Group restoration team
+
+## Services
+
+- [Panel upgrades](https://mclelectric.org/services/panel-upgrades/): panel swaps and 100A to 200A service upgrades, with ComEd coordination
+- [EV charger installation](https://mclelectric.org/services/ev-charger-installation/): Level 2 chargers for homes and businesses, load calc, permit included
+- [Emergency electrician](https://mclelectric.org/services/emergency-electrician/): 24/7 emergency response
+- [Troubleshooting and repairs](https://mclelectric.org/services/troubleshooting-repairs/): tripping breakers, flickering lights, dead outlets
+- [Lighting installation](https://mclelectric.org/services/lighting-installation/): interior, exterior and commercial lighting
+- [Remodel wiring](https://mclelectric.org/services/remodel-wiring/): kitchens, baths and whole-home remodels
+- [Home electrical inspections](https://mclelectric.org/services/home-electrical-inspections/): safety inspections and updates
+- [Residential electrician](https://mclelectric.org/services/residential-electrician/)
+- [Commercial electrician](https://mclelectric.org/services/commercial-electrician/)
+- [Restaurant electrician](https://mclelectric.org/services/restaurant-electrician/): build-outs and 24/7 service
+- [Medical clinic electrician](https://mclelectric.org/services/medical-clinic-electrician/)
+- [Church, school and institutional electrician](https://mclelectric.org/services/church-school-electrician/)
+- [Same-day electrician in Chicago](https://mclelectric.org/same-day-electrician-chicago/)
+- [24-hour electrician in Chicago](https://mclelectric.org/24-hour-electrician-chicago/)
+
+## About and proof
+
+- [About MCL Electric](https://mclelectric.org/about/): owner-run, crew experience going back to 2000
+- [Reviews](https://mclelectric.org/reviews/): verbatim Google reviews, 5.0 stars
+- [Projects](https://mclelectric.org/projects/): real Chicago electrical work with photos
+- [For GCs and developers](https://mclelectric.org/for-gcs/): itemized bids, COIs on request, permits handled, draw-schedule invoicing
+- [Electricista en Chicago (Español)](https://mclelectric.org/es/)
+
+## Guides
+
+- [How much does a panel upgrade cost in Chicago?](https://mclelectric.org/blog/electrical-panel-upgrade-cost-chicago/)
+- [EV charger home installation in Chicago: cost and process](https://mclelectric.org/blog/ev-charger-installation-cost-chicago/)
+- [Do I need a permit for electrical work in Chicago?](https://mclelectric.org/blog/electrical-permit-chicago/)
+- [Why does my circuit breaker keep tripping?](https://mclelectric.org/blog/why-does-my-circuit-breaker-keep-tripping/)
+- [Why are my lights flickering?](https://mclelectric.org/blog/why-are-my-lights-flickering/)
+- [8 warning signs of electrical problems at home](https://mclelectric.org/blog/warning-signs-electrical-problems-home/)
+- [Knob-and-tube and aluminum wiring in Chicago homes](https://mclelectric.org/blog/knob-and-tube-aluminum-wiring-chicago/)
+- [Whole-house surge protection in Chicago](https://mclelectric.org/blog/whole-house-surge-protection-chicago/)
+- [Restaurant electrical build-outs in Chicago](https://mclelectric.org/blog/restaurant-electrical-build-out-chicago/)
+- [Electrical maintenance for Chicago property managers](https://mclelectric.org/blog/electrical-maintenance-property-managers-chicago/)
+
+## Optional
+
+- [Service area pages](https://mclelectric.org/sitemap.xml): one page per town and neighborhood, listed in the sitemap
+- [Privacy](https://mclelectric.org/privacy/)
+- [Accessibility](https://mclelectric.org/accessibility/)
